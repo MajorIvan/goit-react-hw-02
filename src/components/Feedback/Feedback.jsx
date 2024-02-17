@@ -6,7 +6,7 @@ const Feedback = ({
     positivFeedback,
   }) => {
     return (
-      <div className={css.feedback}>
+      <div>
         <p>Good: {good}</p>
         <p>Neutral: {neutral}</p>
         <p>Bad: {bad}</p>
