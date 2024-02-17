@@ -23,7 +23,7 @@ function App() {
     
     const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
     const isHidden = totalFeedback === 0;
-    const positivFeedback = Math.round(
+    const positiveFeedback = Math.round(
         ((feedback.good + feedback.neutral) / totalFeedback) * 100
     );
 
@@ -43,7 +43,7 @@ function App() {
                 <Feedback
                     feedbackType={feedback}
                     totalFeedback={totalFeedback}
-                    positivFeedback={positivFeedback}/>)}
+                    positiveFeedback={positiveFeedback}/>)}
         </>
     );
 }
