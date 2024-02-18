@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import Description from '../Description/Description.jsx';
-import Options from '../Options/Options.jsx'
+import Options from '../Options/Options.jsx';
 import Feedback from '../Feedback/Feedback.jsx';
+import Notification from '../Notification/Notification.jsx';
 
 function App() {
     const [feedback, setFeedback] = useState(
@@ -39,11 +40,11 @@ function App() {
                 isHidden={isHidden} 
                 onReset={onReset} />
             {isHidden ? (
-                <p>No feedback yet</p>) : (
-                <Feedback
-                    feedbackType={feedback}
-                    totalFeedback={totalFeedback}
-                    positiveFeedback={positiveFeedback}/>)}
+                <Notification />) : (
+                    <Feedback
+                        feedbackType={feedback}
+                        totalFeedback={totalFeedback}
+                        positiveFeedback={positiveFeedback}/>)}
         </>
     );
 }
